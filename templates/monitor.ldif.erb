@@ -1,0 +1,17 @@
+dn: olcDatabase={2}monitor
+objectClass: olcDatabaseConfig
+olcDatabase: {2}monitor
+olcAccess: {0}to *  by dn.base="cn=manager,dc=<%= secondlevel_domain %>,dc=<%= toplevel_domain %>" read  by * non
+ e
+olcAddContentAcl: FALSE
+olcLastMod: TRUE
+olcMaxDerefDepth: 15
+olcReadOnly: FALSE
+olcMonitoring: FALSE
+structuralObjectClass: olcDatabaseConfig
+entryUUID: a3c19c08-4bcf-1030-930e-af78d302492c
+creatorsName: cn=config
+createTimestamp: 20110726123633Z
+entryCSN: 20110726123633.476103Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20110726123633Z
