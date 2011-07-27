@@ -9,15 +9,15 @@ class ldap::config {
 			content => template('ldap/slapd.conf.erb');
 
 		'bdb.ldif':
-			ensure => present,
+			ensure => absent,
 			path => '/etc/openldap/slapd.d/cn=config/olcDatabase={1}bdb.ldif',
-			owner => root,
-			group => root,
+			owner => ldap,
+			group => ldap,
 			mode => 0600,
 			content => template('ldap/bdb.ldif.erb');
 
 		'monitor.ldif':
-			ensure => present,
+			ensure => absent,
 			path => '/etc/openldap/slapd.d/cn=config/olcDatabase={2}monitor.ldif',
 			owner => root,
 			group => root,
