@@ -2,7 +2,11 @@ import 'packages.pp'
 import 'config.pp'
 import 'services.pp'
 
-class ldapclass {
+class ldapclass (
+	$rootpass,
+	$secondlevel_domain,
+	$toplevel_domain
+) {
 	include ldap::packages
 	include ldap::config
 	include ldap::services

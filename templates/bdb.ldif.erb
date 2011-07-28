@@ -41,5 +41,5 @@ entryCSN: 20110725085400.329958Z#000000#000#000000
 modifiersName: cn=config
 olcTLSCertificateFile: /etc/pki/tls/certs/slapdcert.pem
 olcTLSCertificateKeyFile: /etc/pki/tls/certs/slapdkey.pem
-olcRootDN: cn=Manager,dc=<%= secondlevel_domain %>,dc=<%= toplevel_domain %>
-olcRootPW: <%= ldap_rootpass %>
+olcRootDN: cn=Manager,dc=<%= 'ldapclass::secondlevel_domain' %>,dc=<%= 'ldapclass::toplevel_domain' %>
+olcRootPW: <%= 'ldapclass::rootpass' %>

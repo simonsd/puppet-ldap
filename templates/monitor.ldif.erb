@@ -1,7 +1,7 @@
 dn: olcDatabase={2}monitor
 objectClass: olcDatabaseConfig
 olcDatabase: {2}monitor
-olcAccess: {0}to *  by dn.base="cn=manager,dc=<%= secondlevel_domain %>,dc=<%= toplevel_domain %>" read  by * non
+olcAccess: {0}to *  by dn.base="cn=manager,dc=<%= 'ldapclass::secondlevel_domain' %>,dc=<%= 'ldapclass::toplevel_domain' %>" read  by * non
  e
 olcAddContentAcl: FALSE
 olcLastMod: TRUE
